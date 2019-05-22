@@ -1,0 +1,33 @@
+<html>
+
+
+<head>
+
+    <script>
+        //symbol可以作为一个key使用
+
+        //如果用做json的key时，打印不出来
+        let json={
+            a:'12',
+            b:213,
+            [Symbol]:'asd'
+        }
+
+        for (let key in json) {
+            console.error(key);
+        }
+
+
+    </script>
+
+</head>
+
+
+
+<body>
+
+
+
+</body>
+
+</html>

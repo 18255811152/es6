@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <!-- 解决异步 -->
+    <!-- 语法 -->
+
+    <!-- function * show(){
+            
+        } -->
+    <script>
+        function * gent(){
+            yield 'welcom',
+            yield 'to'
+            return 'qewqe'
+        }
+        let g1= gent();
+        console.error(gent);
+
+        //查找里面的单个数据
+        let data=g1.next(); //{value: "welcom", done: false}
+        let data1=g1.next();
+        console.error(data);
+
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

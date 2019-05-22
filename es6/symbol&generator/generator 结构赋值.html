@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <!-- 解决异步 -->
+    <!-- 语法 -->
+
+    <!-- function * show(){
+            
+        } -->
+    <script>
+        function * gent(){
+            yield 'welcom',
+            yield 'to'
+            return 'qewqe'
+        }
+     //结构赋值
+    let [a, ...b] = gent();
+    console.error(a,b)
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

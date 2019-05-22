@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <!-- 解决异步 -->
+    <!-- 语法 -->
+
+    <!-- function * show(){
+            
+        } -->
+    <script>
+        function * gent(){
+            yield 'welcom',
+            yield 'to'
+            return 'qewqe'
+        }
+        let g1= gent();
+        console.error(gent);
+
+        for(let val of g1){
+            console.error(val);
+        }
+
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>
