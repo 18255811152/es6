@@ -1,23 +1,20 @@
 <html>
 
 <head>
-    <!-- 解决异步 -->
-    <!-- 语法 -->
-
-    <!-- function * show(){
-            
-        } -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
-        function* gent() {
-            yield 'welcom',
-                yield 'to'
-            return 'qewqe'
+
+        function * gnet(){
+            let  val =yield '111';
+            yield axios.get(`https://api.github.com/user/${val}`);
         }
 
-        console.error(Array.from(gent()));
-        //Array (2)
-        // 0 "welcom"
-        // 1 "to"   
+        let g1 = gnet();
+        let username =g1.next().value;
+        g1.next(username).value.then(res=>{
+            console.error(res.data);
+        })
+
 
     </script>
 
