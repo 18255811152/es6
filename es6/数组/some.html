@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <script>
+       //查看数组里面是否有指定的数据
+       let arr = ['apple','orange','banner']
+
+       let b = arr.some((val,index,arr)=>{
+           return val == 'apple';
+       })
+       console.error(b);
+
+
+
+       // 应用  可以进行数组比对处理
+       function findInArray(arr,item){
+           return arr.some((val,index,arr)=>{
+                return val == item;
+           })
+       }
+       console.error(findInArray(arr,'banners'));
+
+       
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

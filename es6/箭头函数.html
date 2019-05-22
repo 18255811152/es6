@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <!-- 箭头函数
+    左边是参数
+    右边是返回值 -->
+    <script>
+        // function show(){
+        //     return 1;
+        // }
+        //==
+        // let show = () =>1;
+        // console.error(logstr);
+
+
+        // function show (a,b){
+        //     return a+b;
+        // }
+        // //==
+        // let show =(a,b) =>a+b;
+
+        // let show =(a=3,b=5)=>{
+        //     console.error(a,b);
+        //     return a+b;
+        // }
+        // show(2,18);
+
+        //延迟两秒弹出
+
+        let json ={
+            id:1,
+            show:function(){
+                setTimeout(()=>{
+                    window.alert(this.id);
+                },200);
+            }
+        }
+
+
+        //注意问题
+        // 1.this问题 定义函数所在的对象，不在是运行时所在的对象
+        //2.箭头函数里面没有arguments 用...
+        //3.箭头函数不能当成构造函数使用
+
+
+
+    </script>
+</head>
+
+</html>

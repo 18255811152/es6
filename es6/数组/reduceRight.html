@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <script>
+
+        //从右往左
+
+
+        // 累加处理
+        let arrint = [1, 123, 523, 62, 74, 876, 234, 89];
+
+        let countNumber = arrint.reduceRight((counNumber, nextNumber, index, arrint) => {
+            return counNumber + nextNumber;
+        })
+        console.error(countNumber);
+
+        //阶乘处理
+        
+        let countNumbers = arrint.reduceRight((counNumber, nextNumber, index, arrint) => {
+            return Math.pow(countNumber,nextNumber);
+        })
+        console.error(countNumbers);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

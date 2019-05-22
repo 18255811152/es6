@@ -1,0 +1,17 @@
+<html>
+<!-- 只要又一个成功就返回 -->
+
+<head>
+    <script>
+        let p1 = Promise.resolve('123');
+        let p2 = Promise.resolve('aaa');
+        let p3 = Promise.resolve('ccc');
+        Promise.race([p1, p2, p3]).then(res => {
+            console.error(res);
+            let [res1, res2, res3] = res;
+            console.error(res1, res2, res3);
+        })
+    </script>
+</head>
+
+</html>

@@ -1,0 +1,19 @@
+<html>
+<!-- 合并对象 -->
+
+<head>
+    <script>
+        let json1 = { a: 1 };
+        let json2 = { a: 3, v: 18 }
+        let json3 = { ff: 100 }
+        let obj = Object.assign({}, json1, json2, json3);
+        console.error(obj);
+
+        //复制功能 
+        let arr = ['apple', 'banner', 'orange']
+        let newArr = Object.assign([], arr);
+        console.error(newArr);
+    </script>
+</head>
+
+</html>

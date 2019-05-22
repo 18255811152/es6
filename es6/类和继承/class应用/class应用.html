@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <script>
+        // 1.当使用了构造函数，并且new 构造函数(),后台会隐式执行new Object()创建对象;
+        // 2.将构造函数的作用域给新对象，（即new Object()创建出的对象），而函数体内的this就代表new Object()出来的对象。
+        // 3.执行构造函数的代码。
+        // 4.返回新对象（后台直接返回）;
+
+        //es5
+        // window.onload = function Persion(name, age) {
+        //     this.name = age;
+        //     this.age = age;
+        // }
+
+        // Persion.prototype.say = () => {
+        //     return `我的名字 +${this.name}+ 芳龄+${this.age}`
+        // }
+        // let obj = new Persion('章三', 18);
+        // window.alert(obj.say);
+        //es6
+        class Persion {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            say() {
+                return `我的名字:${this.name} 芳龄:${this.age}`
+            }
+        }
+        var obj = new Persion('章三', 18);
+        window.alert(obj.say());
+
+        //         注意项
+
+        // 1.在类中声明方法的时候，千万不要给该方法加上function关键字
+        // 2.方法之间不要用逗号分隔，否则会报错
+
+        setTimeout(() => {
+            window.alert(typeof Persion);//function
+            setTimeout(() => {
+                window.alert(Persion === Persion.prototype.constructor);//ture
+            }, 1000)
+        }, 2000)
+
+
+        // 实际上类的所有方法都定义在类的prototype属性上。
+        Persion.prototype.say = function () {
+            return `我的名字:${this.name} 芳龄:${this.age}`;
+        }
+        let obj1 = new Persion('章三', 18);
+        window.alert(obj1.say);
+
+        //当然也可以通过prototype属性对类添加方法。
+        setTimeout(()=>{
+            window.alert(obj1.addFn());
+        },2000)
+
+        //还可以通过Object.assign方法来为对象动态增加方法
+        Object.assign(Persion.prototype,{
+            getName:function(){
+                return this.name
+            },
+            getAge:function(){
+                return this.age;
+            }
+        })
+        var obj2= new Persion('里斯',150);
+        setTimeout(()=>{
+            window.alert(obj2.name);
+            setTimeout(()=>{
+                window.alert(obj2.age);
+            })
+        })
+
+        //constructor方法是类的构造函数的默认方法，通过new命令生成对象实例时，自动调用该方法。
+        class bxo{
+            constructor(){
+                window.alert(`今天是个好日子  胖哥的膝盖又开始痛`);
+            };
+        }
+        let ob4= new bxo();  // 会直接弹出 alert();
+
+        //可以用返回的构造函数返回该类的实例
+
+
+        class desk{
+            constructor(){
+                alert(`11111111111111`);
+            }
+        }
+        class Box{
+            constructor(){
+                new desk();
+            }
+        }
+
+        window.alert(new Box());
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+
+</body>
+
+</html>

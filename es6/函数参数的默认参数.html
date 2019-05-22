@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<!-- 函数默认值 已经定义不能在定义 -->
+
+
+<head>
+    <script>
+        function show({ a = 1, b = 2 } = {}) {
+            console.log(a, b);
+        }
+
+        show({ a: 'zhang', b: 'san' });
+        show({});
+
+        // <!-- reset ... 展开数组 -->
+
+        function rest() {
+            //  对数据排序
+            return Array.prototype.slice.call(arguments).sort();
+        }
+
+        function rest2(...a) {
+            //  对数据排序
+            return a.sort();
+        }
+
+        function rest2(a, b, ...a) {
+            console.error(a, b);
+            console.error(c);
+        }
+        console.error(rest(10, 500, -800, -20, -900));
+
+
+        //copy数值
+        let arr = [a, v, c, sd, sad, a];
+        let copyarr = [...arr];
+        console.error(copyarr);
+
+
+
+    </script>
+</head>
+
+</html>

@@ -1,0 +1,28 @@
+<html>
+<!--  解决回掉问题 -->
+
+<head>
+    <script>
+        let a = 10;
+        let mPromise = new Promise(function (resolve, reject) {
+            if (a = 10) {
+                resolve("成功");
+            } else {
+                reject("失败鸟");
+            }
+        });
+
+        mPromise.then(res => {
+            console.error(mPromise);
+        }, err => {
+            console.error(mPromise);
+        });
+        mPromise.catch(err => {
+            console.error(mPromise);
+        })
+
+
+    </script>
+</head>
+
+</html>

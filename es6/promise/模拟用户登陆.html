@@ -1,0 +1,50 @@
+<html>
+<!--  解决回掉问题 -->
+
+<head>
+    <script>
+        let status = 1;
+        let Json = {
+            data: '123',
+            msg: '123',
+            status: 000
+        }
+        let userLogin = (resolve, reject) => {
+            setTimeout(() => {
+                if (status == 1) {
+                    resolve({
+                        data: '用户登陆成功',
+                        msg: 's s s s',
+                        status: 500
+                    });
+                } else {
+                    reject('失败了');
+                }
+            }, 2000)
+        }
+
+        let getUserInfo = (resolve, reject) => {
+            setTimeout(() => {
+                if (status == 1) {
+                    resolve({
+                        data: '用户登陆失败',
+                        msg: 's s s s',
+                        status: 500
+                    });
+                } else {
+                    reject('失败了');
+                }
+            }, 1000)
+        }
+        new Promise(userLogin).then(res => {
+            console.error(res.data);
+            return new Promise(getUserInfo)
+        }).then(res => {
+            console.error(res.data);
+        })
+
+
+    </script>
+</head>
+
+</html>

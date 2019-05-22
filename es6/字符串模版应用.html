@@ -1,0 +1,39 @@
+<html>
+
+<head>
+<script>
+    let data = [
+        { title: '习近平会见全国自强模范助残先进代表', read: '10' },
+        { title: '近平致信祝贺第三届世界智能大会开幕', read: '45' },
+        { title: '习近平向国际人工智能与教育大会致贺信', read: '3' },
+        { title: '发展理念的一场深刻革命  深入理解新发展理念', read: '8' },
+        { title: '亚洲文化嘉年华"圆满落幕 主创团队揭秘背后故事', read: '1000' },
+    ];
+
+    window.onload = function () {
+        let oUrl = document.querySelector('#uil');
+        for (let index = 0; index < data.length; index++) {
+            var oli = document.createElement('li');
+            oli.innerHTML = `<span>${data[index].title}</span>
+            <span>${data[index].read}</span>
+            <a href="javascript:;">详情</a>`;
+            oUrl.appendChild(oli);
+        }
+
+    }
+
+
+
+</script>
+</head>
+
+<body>
+    <ul id="uil">
+        <!-- <li>
+            <span>这是新闻标题</span>
+            <span>阅读人数： 10</span>
+            <a href="javascript:;">详情</a>
+        </li> -->
+    </ul>
+</body>
+</html>

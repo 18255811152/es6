@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <script>
+        //非常有用，做数据交互的  映射
+        //正常情况下，需要配合return 返回一个新的数组
+        //若时没有return 相当于 forEach
+
+        //平时只要用map 基本上一定是有return
+        let jsonArr = [
+            { title: 'a', read: 100, hot: true },
+            { title: 'a', read: 100, hot: true },
+            { title: 'a', read: 100, hot: true },
+            { title: 'a', read: 100, hot: true },
+        ]
+        let newArr = jsonArr.map((value, index, jsonArr) => {
+
+            //数据重组
+            let json = {};
+            json.t = `1232${value.title}`
+            json.r = `asdasd${value.read}`
+            json.hot = value.title == true && '啦啦啦'
+            return json;
+
+        })
+        console.error(newArr);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

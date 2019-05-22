@@ -1,0 +1,36 @@
+<html>
+<!-- 合并对象 -->
+
+<head>
+    <script>
+        // 结构赋值
+        let { keys, values, entries } = Object;
+        let json1 = {
+            a: 1,
+            b: 2,
+            c: 3
+        };
+        for (let key of Object.keys(json1)) {
+            console.error(key);
+        }
+
+        for (let key of keys(json1)) {
+            console.error(key);
+        }
+
+        for (let value of values(json1)) {
+            console.error(value);
+        }
+
+        for (let entrie of entries(json1)) {
+            console.error(entrie);
+        }
+
+
+
+
+
+    </script>
+</head>
+
+</html>

@@ -1,0 +1,45 @@
+<html>
+     <!-- from: 作用把类数组转换成数组  -->
+     <!-- 具备length就靠谱 -->
+<head>
+    <script>
+
+        let json = {
+            name:'zhangsan',
+            age:129,
+            hot:true,
+            // 但是只要加上lenght就可以
+            length:2
+        }
+
+        console.error(Array.from(json));
+
+
+        let str='strive'
+
+        console.error(Array.from(str));
+        console.error(str.split(','));
+
+
+
+
+
+        window.onload = function () {
+            let uli = document.querySelectorAll('ul li');
+            let arrlist =Array.from(uli );
+            console.error(arrlist);
+        }
+
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>asdad</li>
+        <li>asdad</li>
+        <li>asdad</li>
+        <li>asdad</li>
+    </ul>
+</body>
+
+</html>
