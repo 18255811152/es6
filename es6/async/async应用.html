@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <script>
+        async function fn(){
+            return 'welcome';
+        }
+
+        console.error(fn()); //promise 对象
+        fn().then(res=>{
+            console.error(res); //welcome
+        })
+
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

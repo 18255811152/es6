@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <script>
+        async function fn(){
+            await Promise.reject('XXXXXXX');
+
+            //后面的数据讲不出执行
+            await Promise.resolve('XXXXXXX');
+        }
+
+      fn().then(res=>{
+          console.error(res);
+      })
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>
