@@ -1,0 +1,35 @@
+<html>
+<!--  解决回掉问题 -->
+
+<head>
+    <script>
+
+        //1
+        let setArray = new Set().add('q').add('1').add('3').add('f');
+
+        //2
+        let setArray1 = new Set(['1','1','1','1','1','1','1','1','1','1',]);
+        let setArray2=new Set(setArray1);
+        console.error(setArray2);
+        let setArray3=[...new Set(setArray1)];
+
+
+        //set ===》数组
+
+
+        //({},{})
+        let jsonSet =new Set();
+        let json={
+            a:1,
+            b:2
+        }
+        jsonSet.add(json); 
+
+        array.forEach(value => {
+            console.error(value);
+        });
+
+    </script>
+</head>
+
+</html>
