@@ -1,23 +1,20 @@
 <html>
 
 <head>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"/>
     <script>
-
-        function * gnet(){
-            let  val =yield '111';
+        function* gnet() {
+            let val = yield '111';
             yield axios.get(`https://api.github.com/user/${val}`);
         }
 
         let g1 = gnet();
-        let username =g1.next().value;
-        g1.next(username).value.then(res=>{
+        let username = g1.next().value;
+        g1.next(username).value.then(res => {
             console.error(res.data);
         })
 
-
     </script>
-
 </head>
 
 <body>
